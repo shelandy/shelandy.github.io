@@ -79,7 +79,7 @@ var focus = svg.append("g")
 var context = svg.append("g")
     .attr("class", "context")
     .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
-d3.csv("sonar146cm.csv", type, function(error, data) {
+d3.csv("sonar147cm.csv", type, function(error, data) {
   x.domain(d3.extent(data.map(function(d) { return d.clock; })));
   y.domain([yminvalue, d3.max(data.map(function(d) { return d.value; }))]);
   x2.domain(x.domain());
