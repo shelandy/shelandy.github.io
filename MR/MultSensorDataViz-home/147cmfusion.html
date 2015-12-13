@@ -25,7 +25,6 @@ body {
 
 </style>
 <body>
-<script src="http://d3js.org/d3.v3.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.js"></script>
     <h1>SR05 (using newping med3()) Sonar & 6050 reading at home</h1>
     <h4>x: incoming reading index; y: unit: 0.1mm static positiion (~146cm) sonar:~ 15fps 6050 ~ 60fps</h4>
@@ -37,7 +36,7 @@ var margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var parseDate = d3.time.format("%Y%m%d").parse;
+var parseDate = d3.time.format("%L).parse;
 
 var x = d3.time.scale()
     .range([0, width]);
@@ -65,8 +64,8 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data.tsv", function(error, data) {
-  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+d3.csv("147cmfusion.csv(error, data) {
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "clock"; }));
 
   data.forEach(function(d) {
     d.date = parseDate(d.date);
