@@ -29,8 +29,8 @@ body {
 <h2>dynamic trial 2<.h2>
 <h4></h4>use keystrok: <ctl> + <+> or <ctl> + <-> to zoom in or out</h4>
 <h4></h4>in 25 sec</h4>
-<h4>Dist: 404 samples:  maxjump 7110 maxVar: 4000.826733 </h4>
-<h4>Accel: 1498 samples: maxjump 10141 maxVar: 8846.431242 </h4>
+<h4>Dist: 401 samples:  maxjump 7446 maxVar:  4345.775561 </h4>
+<h4>Accel: 1499 samples: maxjump 10654 maxVar:10173.279520 </h4>
 
 <script>
 
@@ -66,7 +66,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("da.tsv", function(error, data) {
+d3.tsv("da2.tsv", function(error, data) {
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
 
   data.forEach(function(d) {
