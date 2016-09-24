@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chart</title>
+<link rel="stylesheet" type="text/css" href="dist/jquery.jqplot.css" />
+<script type="text/javascript" src="dist/jquery.min.js"></script>
+<script type="text/javascript" src="dist/jquery.jqplot.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e)
+{
+	$.getJSON("data.txt",
+	function(result)
+	{
+		//alert(result);
+		$.jqplot('chartdiv', result);
+	});
+	
+	data=$("#t1 .t2").toArray();
+	for(i=0;i<data.length;i++)
+		alert(data[i].id);
+	
+	
+	//alert($("#t3").children().length);
+});
+</script>
+</head>
+
+<body>
+<div id="chartdiv" style="height:400px;width:300px;"></div>
+<div id="t1">
+	<ul id="t3" style="list-style:none;">
+		<li>
+        	<div class="t2" id="a1">
+            11
+    		</div>
+        </li>
+        <li>
+    		<div class="t2" id="a2">
+            22
+    		</div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

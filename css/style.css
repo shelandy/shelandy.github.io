@@ -1,0 +1,18 @@
+.slide.current {
+    visibility: visible;
+    display: block;
+    margin-left: -450px;
+}
+
+
+.slide:nth-child(2n+1) {
+border-radius: 0px 20px 0px 20px;}
+
+.slide {display: none;position: absolute;overflow: hidden;width: 900px;height: 700px;left: 50%;top: 50%;margin-top: -350px;background: -moz-linear-gradient(center bottom , rgb(187, 187, 221), rgb(255, 255, 255)) repeat scroll 0% 0% transparent;transition: margin 0.25s ease-in-out 0s;}
+
+.css, .js, .html, .key {font-family: 'Droid Sans';color: black;display: inline-block;padding: 6px 10px 3px;font-size: 25px;line-height: 30px;text-shadow: none;letter-spacing: 0px;bottom: 10px;position: relative;border-radius: 10px 10px 10px 10px;background: none repeat scroll 0% 0% white;box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);}
+
+header {font-family: 'Droid Sans';font-weight: normal;letter-spacing: -0.05em;color: black;
+text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);position: absolute;left: 30px;top: 25px;margin: 0px;padding: 0px;font-size: 50px;}
+
+body {font: 16px "Lucida Grande","Trebuchet MS",Verdana,sans-serif;}

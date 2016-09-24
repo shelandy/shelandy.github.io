@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+#function
+{
+	width:1000px;
+}
+
+#functionName
+{
+	display:inline-block;
+}
+
+#page
+{
+	display:inline-block;
+}
+
+#search
+{
+	display:inline-block;
+	float:right;
+}
+
+#foo ul 
+{
+    position:absolute; /* required */
+    overflow:hidden; /* required */
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+ 
+#foo ul li 
+{
+    float:left; /* required */
+    width:300px;
+    height:200px;
+    margin:0 10px 0 0;
+}
+ 
+#foo .mask 
+{
+    position:relative; /* required */
+    overflow:hidden; /* required */
+    width:600px; /* required */
+}
+ 
+#foo .pagination-links 
+{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ 
+#foo .pagination-links li 
+{
+    display:inline;
+}
+ 
+#foo .pagination-links li.current {
+    background:grey;
+}
+ 
+#foo .disabled {
+    color:grey;
+}

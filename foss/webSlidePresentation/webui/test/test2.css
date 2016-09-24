@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#container
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:1020px;
+}
+
+#logo
+{
+	width:1024px;
+	height:0px;
+	-webkit-animation: myfirst 3s; /* Safari and Chrome */
+	background-color:#C6F;
+}
+
+#popupWindow
+{
+	position:fixed;
+	border:thin solid #000;
+	border-radius:10px;
+	display:none;
+	background-color:#FFF;
+	width:520px;
+	height:290px;
+	z-index:5;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#popupTitle
+{
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	width:520px;
+	height:30px;
+	background-color:#999;
+	border-bottom:thin solid #000;
+}
+
+#closeFunction
+{
+	margin-right:5px;
+	float:right;
+}
+
+#popupBackground
+{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#999;
+	opacity:0.7;
+	z-index:2;
+	display:none;
+}
+
+#carouselMain
+{
+	width:800px;	
+}
+
+.myCarousel
+{
+	width:500px;
+	position:relative;
+}
+
+#left
+{
+	height:200px;
+	float:left;
+}
+
+#right
+{
+	display:inline-block;
+	height:200px;
+}
+
+/*Tiny Scrollbar*/
+#scrollbar1 { width:520px; clear: both; margin: 20px 0 10px; margin-top:5px;}
+#scrollbar1 .viewport { width:500px; height:245px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { background-color: #003D5D; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#scrollbar1 .track { background-color: #D8EEFD; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#scrollbar1 .disable{ display: none; }
+
+/*Tiny Carousel*/
+#slider1 { height: 125px; overflow:hidden; }
+#slider1 .viewport { float: left; width: 240px; height: 125px; overflow: hidden; position: relative; }
+#slider1 .buttons { display: block; margin: 30px 10px 0 0; float: left; }
+#slider1 .next { margin: 30px 0 0 10px;  }
+#slider1 .disable { visibility: hidden; }
+#slider1 .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider1 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 121px; border: 1px solid #dcdcdc; width: 236px;}
+
+/*CSS3 Annimation*/
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+from {background: white;}
+to {background: #C6F;}
+}

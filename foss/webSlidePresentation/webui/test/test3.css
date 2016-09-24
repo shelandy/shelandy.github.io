@@ -1,0 +1,292 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	padding:10px;
+	width:100%;
+	overflow:scroll;
+}
+
+/*#sliderWindow
+{
+	position:fixed;
+	float:right;
+	top:0;
+	width:20px;
+	border:thin solid #000;
+	background-color:#CCC;
+	z-index:5;
+}*/
+
+#logo
+{
+	display:inline-block;
+	border:thin solid #000;
+	width:140px;
+	height:90px;
+	margin-right:10px;
+}
+
+#welcomeInfo
+{
+	display:inline-block;
+	border:thin solid #000;
+	width:500px;
+	height:100px;
+}
+
+#tabs
+{
+	width:60%;
+	margin-bottom:20px;
+	background-color:#FFF;
+	border-bottom:thin solid #0CF;
+	/*border radius*/
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	/*border-bottom-right-radius: 25px;*/
+	/*border-bottom-left-radius: 25px;*/
+}
+
+#tabs .tabItems
+{
+	margin-left:10px;
+	margin-top:20px;
+	display:inline-block;
+	width:100px;
+	height:30px;
+	background-color:#0CF;
+	text-align:center;
+	cursor:pointer;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+#tabs .notification
+{
+	display:inline-block;
+	color:#F00;
+	font-size:9px;
+}
+
+
+.container
+{
+	width:80%;
+	height:500px;
+	padding-top:0px;
+	padding-left:20px;
+	padding-right:0px;
+	background-color:#0FF;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+#banner
+{
+	width:100%;
+	height:30px;
+	margin:0;
+}
+
+#block
+{
+	float:right;
+	width:200px;
+	height:30px;
+	background-color:#FFF;
+	border-bottom-left-radius: 25px;
+}
+
+.function
+{
+	width:80%;
+	height:45px;
+	padding-bottom:10px;
+	vertical-align:bottom;
+}
+
+.functionName
+{
+	font-size:24px;
+	display:inline-block;
+	width:20%;
+}
+
+#search
+{
+	display:inline-block;
+	float:right;
+}
+
+
+#page
+{
+	display:inline-block;
+}
+
+#page .item
+{
+	display:inline-block;
+	width:20px;
+	cursor:pointer;
+}
+
+
+#sort
+{
+	display:inline-block;
+}
+
+.content
+{
+	position:relative;
+	padding:0px;
+	width:80%;
+	height:400px;
+	background-color:#FFF;
+	/*border radius*/
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+#foo
+{
+	display:inline-block;
+}
+
+.content .left
+{
+	position:absolute;
+	display:inline-block;
+	left:0;
+	width:30px;
+	height:400px;
+	background-color:#CCC;
+	margin:0px;
+	opacity:0;
+	z-index:3;
+	/*border radius*/
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+.content .right
+{
+	position:absolute;
+	display:inline-block;
+	width:30px;
+	height:400px;
+	background-color:#CCC;
+	margin:0px;
+	opacity:0;
+	z-index:3;
+	/*border radius*/
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+.contentItem
+{
+	width:auto;
+	height:400px;
+	overflow:hidden;
+}
+
+.nail
+{
+	display:inline-block;
+	margin:10px;
+	width:150px;
+	height:150px;
+	/*border:thin solid #000;*/
+}
+.nail .name
+{
+	position:relative;
+	height:10%;
+}
+.nail .name .check
+{
+	float:right;
+}
+.nail .pic
+{
+	position:relative;
+	margin:3px;
+	border:thin solid #999;
+	height:75%;
+	cursor:pointer;
+}
+.nail .nailfunctions
+{
+	position:relative;
+	height:10%;
+}
+
+.nail .nailfunctions .detail
+{
+	float:right;
+}
+
+#popupWindow
+{
+	display:none;
+	position:fixed;
+	padding:10px;
+	/*width:300px;*/
+	/*height:300px;*/
+	background-color:#FFF;
+	z-index:10;
+	-moz-box-shadow: 10px 10px 5px #888888;
+	box-shadow: 10px 10px 5px #888888;
+	/*border radius*/
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+#popupBackground
+{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#999;
+	opacity:0.7;
+	z-index:9;
+}
+
+#popupWindow .pic
+{
+	margin:10px;
+	border:thin solid #FFF;
+	width:200px;
+	height:150px;
+}
+
+#popupWindow .description
+{
+	margin:10px;
+	width:200px;
+	height:150px;
+}
+
+.foot
+{
+	clear:both;
+	margin-top:10px;
+	margin-left:20px;
+	padding-left:20px;
+	border-top:thin solid #09F;
+	border-bottom:thin solid #09F;
+	width:80%;
+}

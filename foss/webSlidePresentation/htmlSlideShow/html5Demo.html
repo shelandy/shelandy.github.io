@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <title>HTML5 Presentation</title> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/> 
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+    <meta name="author" content="Shelandy Ting" /> 
+
+    <!link rel="stylesheet" type="text/css" href='css/style.css' /> 
+    <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico"/> 
+    <!link href='http://fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'> 
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css" />
+    <link id="prettify-link" href="src/prettify/prettify.css" rel="stylesheet" disabled />
+    <link href="css/moon.css" class="theme" rel="stylesheet" />
+    <link href="css/sand.css" class="theme" rel="stylesheet" />
+    <link href="css/sea_wave.css" class="theme" rel="stylesheet" />
+    <link href="css/default.css" class="theme" rel="stylesheet" media="screen"  />
+    <link href="css/common.css" rel="stylesheet" media="screen" />
+
+    <!script type='text/javascript' src='../../js/amber.js'></script> 
+    <!script type='text/javascript' src='../../js/lib/showdown.js'></script> 
+    <!script type="text/javascript" src="processing-1.4.1.js"></script>
+    <script type="text/javascript" src="http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.js"></script>
+    <!script type="text/javascript" src="https://github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js"></script>
+    <!script type="text/javascript" src="https://github.com/downloads/processing-js/processing-js/processing-1.4.1-api.min.js"></script>
+
+</head> 
+<body> 
+  <div class="slides">
+    <div class="slide" id="landing-slide">
+      <style>
+        #landing-slide p {
+        font-size: 35px;
+        }
+        p#disclaimer-message {
+        font-size: 20px;
+        }
+      </style>
+      <header><span class="js">JS</span> <h1>Web Storage</h1></header>
+      <section class="middle">
+        <p>A Clock made with <a href="http://processingjs.org">Processing.js</a> and Amber</p>
+	<p>Examine the <button onClick="smalltalk.Browser._openOn_(smalltalk.ProcessingClock)"> ProcessingClock class</button></p> 
+	<p><canvas id="canvas1" width="200" height="200"></canvas></p>
+	<script id="script1" type="text/javascript">
+	  // Simple way to attach js code to the canvas is by using a function
+	  function sketchProc(processing) {
+	  // Override draw function, by default it will be called 60 times per second
+	  processing.draw = function() {};
+	  }
+
+	  var canvas = document.getElementById("canvas1");
+	  // attaching the sketchProc function to the canvas
+	  var p = new Processing(canvas, sketchProc);
+	</script>
+	
+	<script type='text/javascript'> loadAmber(
+	  {
+	  files: ['Processing-Examples.js'],
+	  prefix: 'examples/processing/js',
+	  packages: [ 'Processing-Examples' ],
+	  ready: function() {
+	  smalltalk.ProcessingClock._init() 
+	  }
+	  }) 
+	</script> 
+      </section>
+      <aside class="note">
+        <section>
+          Welcome! (This field is for presenter notes and commentary.)
+        </section>
+      </aside> 
+    </div>
+    <div class="slides">
+      <div class="slide" id="landing-slide">
+        <style>
+          #landing-slide p {
+          font-size: 35px;
+          }
+          p#disclaimer-message {
+          font-size: 20px;
+          }
+        </style>
+        <section class="middle">
+          <p>This presentation is an HTML5 website</p>
+	  <video width="320" height="240" controls="controls"><source src="movie.mp4" type="video/mp4" /></video>
+<!-- https://www.dropbox.com/s/os60r63ogwfl408/your_video_here.mp4. -->
+          <p>Press <span id="left-init-key" class="key">&rarr;</span> key to advance.</p>
+          <p id="disclaimer-message">Having issues seeing the presentation? Read the <a href="disclaimer.html">disclaimer</a></p>
+        </section>
+        <aside class="note">
+          <section>
+            Welcome! (This field is for presenter notes and commentary.)
+          </section>
+        </aside> 
+      </div>
+</body> 
+</html> 

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+#foo ul 
+{
+    position:absolute; /* required */
+    overflow:hidden; /* required */
+	width:80%;
+    margin:0;
+    padding:0px;
+    list-style:none;
+}
+ 
+#foo ul li 
+{
+    float:left; /* required */
+    width:200px;
+    height:200px;
+    margin:10px 10px 10px 10px;
+}
+ 
+#foo .mask 
+{
+    position:relative; /* required */
+    overflow:hidden; /* required */
+    width:850px; /* required */
+	height:400px;
+}
+ 
+#foo .pagination-links 
+{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ 
+#foo .pagination-links li 
+{
+    display:inline;
+}
+ 
+#foo .pagination-links li.current 
+{
+    background:grey;
+}
+ 
+#foo .disabled 
+{
+    color:grey;
+}
+
+#page .pagination-links 
+{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ 
+#page .pagination-links li 
+{
+    display:inline;
+	margin-right:3px;
+}
+ 
+#page .pagination-links li.current 
+{
+    background:grey;
+}
+
+#prev
+{
+	display:inline;
+}
+
+#next
+{
+	display:inline;
+}

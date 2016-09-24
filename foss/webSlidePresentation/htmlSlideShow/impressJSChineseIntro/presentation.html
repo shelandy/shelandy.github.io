@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- http://stackoverflow.com/questions/27210691/bootstrap-slides-in-impress-js -->
+    <link href="http://netdna.impressjscdn.com/impressjs/0.5.3/css/impress-demo.css" rel="stylesheet" />    
+    <!-- custom.css -->
+    <!link href="http://pastebin.com/raw.php?i=dTdEky6N" rel="stylesheet" />
+    <style>          
+      .slide {
+      display: block;
+      width: 1000px;
+      height: 700px;
+      border-left:25px solid #eee;
+      color:#fff;
+      }
+    
+      .impress-enabled .step {
+      margin: 0;
+      opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="http://netdna.impressjscdn.com/impressjs/0.5.3/js/impress.js"></script>
+    <div id="impress">
+      
+      <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+	<h1><center>Presentation</center></h1>
+	<span><center>November 30, 2015</center></span>
+      </div>
+      <div id="overview" class="step" data-x="500" data-y="100" datascale="5">
+	<h1><center>Presentation</center></h1>
+      </div>
+      <div id="guidelines" class="step slide" data-x="-1000"
+	   data-y="-2500" >
+	<div class="round"><p>Step 1</p></div>
+      </div>
+      <div id="graphic" class="step slide" data-x="1000"
+	   data-y="-1500" data-rotate="90">
+	<div class="round">Step 2</div>
+      </div>
+      <div id="slide0" class="step slide bootstrapslide" data-x="1800" data-y="0">
+	<h1>Title1</h1>
+	<ul>
+	  <li>Item 1</li>
+	  <li>Item 2</li>
+	  <li>Item 3</li>
+	</ul>
+      </div>
+      <div id="slide1" class="step slide bootstrapslide" data-x="3600" data-y="0">
+	
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script>
+      impress().init();
+    </script>
+  </body>
+
+</html>

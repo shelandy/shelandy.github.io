@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">	
+  <head>
+    <meta charset="utf-8">
+    <title>using Emacs to develop Reveal.js 3 Slide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/reveal.min.css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/css/theme/white.min.css" media="all" />
+    <!--link rel="stylesheet" href="css/reveal.min.css"-->
+    <!--link rel="stylesheet" href="css/theme/default.css" id="theme"-->	
+    <!--Add support for earlier versions of Internet Explorer -->
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <!-- Wrap the entire slide show in a div using the "reveal" class. -->
+    <div class="reveal">
+      <!-- Wrap all slides in a single "slides" class -->
+      <div class="slides">
+	
+	<!-- ALL SLIDES GO HERE -->
+	<!-- Each section element contains an individual slide -->
+	<section id="title-page">
+	  <h1>using Emacs to develop</h1>
+	  <section>	  
+	    <p>Processing & Arduino</p>
+	    <p>by Shelandy Ting
+	  </section>
+	  <section>
+	    <p>powered by Emacs + <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> + github
+          </section>
+	</section>
+
+	<section>
+	  <h1>Why Processing/Arduino</h1>
+	  <section>
+	    Why starting (teaching) from Processing/Arduino instead of other languages?
+          </section>
+          <section>
+	    <p>it is an easy and quick way for beginners to use
+	      Processing for learning drawing things,</p>
+	    <p> and to use
+	      Arduino for making interaction in physical things</p>
+	  </section>
+          <section>
+	    <p>the learning experience of Processing(Java-based) or
+	      Arduinio (C-based) can be reused in the journery of
+	      leaning Java/C and something else later
+          </section>	  
+	</section>
+
+	<section>
+	  <h1>Built-in IDE?</h1>
+	  <section>
+	    <p>Is built-in Processing/Arduino IDE powerful enough?</p>	   
+	  </section>
+	  <section>No!</section>
+	</section>
+
+	<section>
+	  <h2>Define "Powerful Enough"</h2>
+	  <section>
+	    1st level: show the relationship of an object (variable,
+	    class, file,...) to others in the coding context 
+          </section>
+          <section>
+	    <ul>
+	      <li>Static relationship</li> (e.g., scope in the  decalration hierachy)
+	      <li>Dynamic relationship</li> (e.g., calling/using a
+	      variable/function)
+	      
+	      <li>Semantic relationship</li> (e.g., mapping the error
+	      occurance to the line of source code during compilation and running)
+	    </ul>
+          </section>
+          <section>
+	    2nd level: 
+	    <ul>
+	      <li>context/content</li> dual view and switching between
+	      different levels of information abstraction
+	      <li>Support proper self-documentation (refactoring...)
+	    </ul>
+	  </section>
+	</section>
+	
+	<section>
+	  <h1>Why Emacs</h1>
+	  <section>
+	    instead of other IDEs (Eclipse, IntelliJ...?)
+	  </section>
+	  <section>
+	    <p>emacs is protable, lightweighted (e.g., fast), yet powerful</p>
+	  </section>
+	  <section>
+	    <p>Emacs is a good platform (instead of just being an editor), so the learning experience can be applied to other taks 
+	    <p> e.g., using Emacs with reveal.js libararies to write
+	    HTML5 presentation slides like this one, where I do not need to learn javascript
+	    yet I can easily comne up an nice interactive sides for presentation.  
+          </section>
+	</section>
+
+	<section>
+	  <h1>Requirement</h1>
+	  <section>
+	    for using emacs to develop Processing/Arduino
+	  </section>
+	  <section>
+	    <ul>
+	      <li>software:</li>
+	      Emacs and the relevant packages
+	      <li>hardware (optional, only if you want):</li>
+	      Arduino board
+	    </ul>
+          </section>
+	</section>
+
+        <section>
+	  <h2>installation procedure</h2>
+	  <ol>
+	    <li><p>download the emacs</li>	
+	    <li>configurate the init.el file for locating the package repositories
+	    <li><p>install the required packages:(ecb, jdee, multi-refactory...) </p>
+	    <li>configurate the init.el file for each package
+	  </ol>
+        </section>	  
+
+	<section>
+	  <h1>Install Emacs</h1>	  
+	  <p><ul>
+	      <li>Linux
+		should be able to download using whatever package system (.rpm, .pkg...) 
+	      <li>Windows
+	      <li>OSX
+	    </ul>	  
+	</section>
+
+	<section>
+	  <h2>Emacs configuration file name</h2>
+	  <ul>
+	    <li>Linux</li>
+	    ~/.emacs.d/init.el
+	    <li>Windows
+	    <li>OSX
+	  </ul>
+	</section>
+	
+	<section>
+	  emacs.d/.init.el package repository setting sample 
+	  <pre><code>
+(when (>= emacs-major-version 24)
+    (require 'package)
+    (add-to-list 'package-archives
+    '("marmalade" . "http://marmalade-repo.org/packages/"))
+    (add-to-list 'package-archives
+    '("melpa" . "https://melpa.org/packages/"))
+    (package-initialize)
+    )
+</code></pre>
+</section>
+
+<section>
+  <h1>Install Packages</h1>
+  <ul>
+    <li>packages using the package management system
+      <ul>
+	<li>ecb
+	<li>jdee
+      </ul>
+    <li>"Unofficial/external" packages by maunal installation 
+      <ul>
+	<li>multi-refactory or c-xref
+      </ul>
+  </ul>
+</section>
+
+<section> 
+  <h2>Keys, keys</h2>
+  Some basic convention to describe key combination
+  <p><ul>
+      <li>C-</li>
+      <p>"control" key with other key. E.g., C-d means Control-d: press "d"-key while holding Control key 
+      <li>S-</li>"shift" with other key
+      <li>M-</li>"meta" with other key, where
+      <ul>
+	<li>in windows/linux: "Alt"
+	<li>in OSX: <>
+      </ul>
+    </ul>
+
+</section>
+
+<section>
+  <h2>Runing Package Management</h2>
+  <section> 
+    <ol>
+      <li>Emacs Main Menu ->
+      <li>Options ->
+      <li>Manage Emacs Packages ->
+  </section> 
+  <section>
+    <p><ul>
+	<li>use arrow keys to navigate among package listing
+	<LI>C-s to search, for example "ecb"
+	<li>
+	  <ul>
+	    <li>key "i" to select the item under the cursor
+	    <li>key "u" to unselect
+	    <li>key "x" to install all selected pacjages
+	  </ul>
+      </ul>
+    <p>let it finish the download and compilation
+    <p>then quit (Main Menu -> File -> Quit) the emacs and relaunch
+  </section>
+</section>
+
+<section> 
+  <h2>install multi-refactory</h2>
+  <p>
+    <ol>
+      <li>download it from the green botton on <a href="https://github.com/shelandy/multi-refactory/tree/processsing-mode">multi-refactory</a>
+      <li>unzip the file
+      <li>follow the instruction to install 
+    </ol>
+</section>
+
+<section>
+  emacs.d/.init.el setting for multi-refactory mode
+  <pre><code>
+(defun my-xref-settings ()   
+      (defvar c-xref-current-project nil) ;; can be also "my_project_name"
+      (defvar c-xref-key-binding 'global) ;; can be also 'local or 'none
+      (setq load-path (cons "/usr/local/c-xref/emacs" load-path))
+      (setq exec-path (cons "/usr/local/c-xref" exec-path))
+      (load "c-xrefactory")
+      (provide 'xref-settings))
+(add-hook 'processing-mode-hook 'processing-mode-init)
+</code></pre>
+</section>
+
+<section>
+  emacs.d/.init.el setting for Processing mode
+  <pre><code>
+(autoload 'processing-mode "processing-mode" "Processing mode" t)
+(add-to-list 'auto-mode-alist '("\\.pde\\'" . processing-mode))
+(defun processing-mode-init ()
+      (setq processing-sketchbook-dir "~/yourProcessingDir")
+      (setq processing-output-dir "/tmp")
+      (my-xref-settings))
+      ;;;;;;
+((eq system-type 'gnu/linux) ;; os specific setting
+  (progn 
+    (setq processing-location "/usr/local/processing-3.2.1/processing-java")
+    (setq processing-application-dir "/usr/local/processing-3.2.1/")
+    ))
+</code></pre>
+</section>
+
+<section>
+  emacs.d/.init.el setting for JDEE mode 
+  <pre><code>
+(custom-set-variables
+      '(jdee-compiler (quote ("javac")))
+      '(jdee-jdk-registry (quote (("1.8" . "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.101-1.b14.1.mga5.x86_64") ("" . "")))))
+(defun my-java-mode-extra () 
+      (my-jde-refactor-init)
+      (my-xref-settings) ; have to use add-hook instead of eval-after-load
+      )
+(add-hook 'java-mode-hook 'my-java-mode-extra)
+(eval-after-load "java-mode" 'my-java-mode-extra) ; only load snippets files after using yasnippet
+  </code></pre>
+use the icon on menu to save the changed file, or type C-x C-s 
+</section>
+
+<section>
+  Need to restart Emacs after changing the .init.el
+</section>
+
+<section>
+  <h1>Run ECB</h1>
+<section>
+  <ol>
+    <li>execute Emacs
+    <li>load your .pde Processing file
+    <li>execute the emacs command M-x ecb-activate
+      <ul>
+	<li>Emacs commands can be set up as a menu button (will be covered in a different slide)   
+      </ul>
+  </ol>
+</section>
+<section>
+  <img src="images/processingMode.png">
+</section>
+</section>
+
+<section>
+  <h1>Full-blown IDE</h1>
+  <ul>
+    <li>ECB provides code view, simple debugging and both text and
+  graph resuld in run time.
+    <li> .pde file will automatically load processing mode, where 
+      <ul>
+	<li>the processing sub menu provides the major functions
+	(comiple, run...) as the Processing built-in IDE 
+	<LI>maintain the compatibility to run under Processing's built-in IDE
+	<li>The c-xref sub menu provides extra functions such as
+	refactoring and other compile/run function, but requiring
+	setting a project
+      </UL>
+  </ul>
+</section>
+
+<section>
+  <h3>switching between major modes</h3>
+<section>
+  <ul>
+    <li>Run as Java program</li>
+    <ul>
+      <li>switch to Emacs' jdee-mode by excuting M-x jdee-mode
+      <li>if adding enough java code, it provide hierarchical variable and method view, can also comiple and run as java program, but needs extra configuration 
+      <LI>lose the compatibility for running under Proceesing's built-in IDE
+    </ul>
+    <li>Run as Processing program</li>
+   <ul>
+      <li> switch to Emacs' processing-mode by executing M-x
+      processing-mode
+	<li>I suggest save as .pde, but add few java header  
+   </ul>
+  </ul>
+</section>
+<section>
+  <img src="images/processingMode.png">
+</section>
+<section>
+  <img src="images/jdeeMode.png">
+</section>
+</section>
+
+
+<section>
+  <h1>Learning Cost</h1>
+  <section>
+  Is the effort of learning Emacs worth the investiment?
+</section>
+<section>
+  <img src="images/emmetMode.png">
+</section>
+ <section>
+<p>yes!
+<p>Emacs is a flexible platform, not just a simple editor
+</section>
+</section>
+
+<section> 
+  <h2>Powerful IDE revisited</h2>
+  <section>
+    know the relationship of an object (variable, class, file,...) in the coding context 
+  </section>
+  <section>    
+    <p>Static relationship (e.g., scope in decalration hierachy)  
+    <p>(fully by JDEE mode package, partiallly by processing mode package)
+    <ul>
+  </section>
+  <section>
+    <p>mapping dymamic relationship e.g., all locations using this
+    method/variable
+    <p>(by highlight-symbol package) 
+  </section>
+  <section>
+    dual Context/Content view and switching
+    <ul>
+      <li>by ECB hierarchy windows(Context) + code window (Content)
+      <li>code folding/unfolding (by hide-region or ECB/jdee mode)
+    </UL>
+  </section>
+  <section>
+    refactoring (by multi-refactory)
+  </section>
+  <section>
+    Semantic relationship (e.g., compilation and running)
+    <ul>
+      <p><li>show line number of error</li> (requires
+      complier/symbol table integration) (supported by processing-mode)
+      <LI>clickable meant to jump back to the particular
+	code location (supported by processing-mode)
+      <li>show content of variables (w/ debugger) 
+    </ul>
+  </section>  
+</section>
+
+<section id="TOC">
+  <h1>Table Of Content</h1>
+  <p>need a authoring tool to make up here as the end:
+    <ol>
+      <li><a href="#/title-page">title page </a>
+      <li>the rest pages here...
+    </ol>
+</section>
+
+</div>
+</div>
+<!--script src="lib/js/head.min.js"></script>
+<!--script src="js/reveal.min.js"></script-->
+				     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/lib/js/head.min.js"></script>
+				     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/js/reveal.min.js"></script>
+				     
+				     <script>
+				       // Required, even if empty.
+				       Reveal.initialize({
+
+				       // other options ...
+				       math: {
+				       mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+				       config: 'TeX-AMS_HTML-full' // See http://docs.mathjax.org/en/latest/config-files.html
+				       },
+				       dependencies: [{
+				       src: 'plugin/math/math.js',
+				       async: true
+				       }]
+				       
+				       });
+				     </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test2</title>
+<link type="text/css" rel="stylesheet" href="test2.css" />
+<link type="text/css" rel="stylesheet" href="css/custom-theme/jquery-ui-1.8.19.custom.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="src/jquery.tinyscrollbar.min.js"></script>
+<script type="text/javascript" src="src/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	//effect
+	$("#logo").animate({height:150},"slow");
+	$("#logo").animate({color:"#999"},"slow");
+    //$("#logo").animate({width:300},"slow");
+	
+	//dialog
+	$("#showDialog").click(function()
+	{
+		$("#popupBackground").fadeIn();
+		$("#dialog").dialog(
+		{
+			show: "blind",
+			hide: "explode",
+			close: function()
+			{
+				$("#popupBackground").fadeOut();
+			}	
+		});
+	});
+	
+	
+	
+	$("#popup").click(function()
+	{
+		var windowWidth = document.documentElement.clientWidth;  
+		var windowHeight = document.documentElement.clientHeight;  
+		var popupHeight = $("#popupWindow").height();  
+		var popupWidth = $("#popupWindow").width();  
+		$("#popupBackground").fadeIn(1000,function()
+		{
+			$("#popupWindow").css(
+			{
+				"top":windowHeight/2-popupHeight/2,
+				"left":windowWidth/2-popupWidth/2
+			});
+			$("#popupWindow").fadeIn();
+			$('#scrollbar1').tinyscrollbar();
+			
+		});
+	});
+	
+	$(".close").click(function()
+	{
+		$("#popupWindow").fadeOut();
+		$("#popupBackground").fadeOut();
+	});
+	
+}
+);
+</script>
+</head>
+
+<body>
+	<div id="popupWindow">
+    <div id="popupTitle">PopUpWindow
+    	<div id="closeFunction">
+        	<button class="close">X</button>
+        </div>
+    </div>
+    	<div id="scrollbar1">
+		<div class="scrollbar">
+    	<div class="track">
+    	<div class="thumb">
+    	<div class="end">
+    	</div></div></div></div>
+		<div class="viewport">
+		<div class="overview">
+			<p>
+            	Scroll Bar Test, This is Test data
+                <br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+				<br />
+                Scroll Bar Test, This is Test data
+					                
+            </p>
+		</div>
+		</div>
+		</div>
+    </div>
+<div id="container">
+<div id="dialog" title="Basic dialog" style="display:none">
+<p>Test Dialog</p>
+</div>
+<div id="logo">
+TEST WEBSITE
+</div>
+	<button id="popup">PopUp Window</button>
+    <button id="showDialog">Dialog</button>
+	
+    
+	<div id="popupBackground">
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+void setup() {
+  size(300, 200);
+  Rect(20,20,100,150);
+  fillRect(50, 25, 150, 100);      
+  beginPath();
+  arc(250, 110, 100, Math.PI * 1/2, Math.PI * 3/2);
+  lineWidth = 15;
+  lineCap = 'round';
+  strokeStyle = 'rgba(255, 127, 0, 0.5)';
+  stroke();
+}
+
