@@ -45,7 +45,7 @@
 	  </section>
           <section>
 	    <p>the learning experience of Processing(Java-based) or
-	      Arduinio (C-based) can be reused in the journery of
+	      Arduino (C-based) can be reused in the journey of
 	      leaning Java/C and something else later
           </section>	  
 	</section>
@@ -66,12 +66,12 @@
           </section>
           <section>
 	    <ul>
-	      <li>Static relationship</li> (e.g., scope in the  decalration hierachy)
+	      <li>Static relationship</li> (e.g., scope in the  declaration hierarchy)
 	      <li>Dynamic relationship</li> (e.g., calling/using a
 	      variable/function)
 	      
 	      <li>Semantic relationship</li> (e.g., mapping the error
-	      occurance to the line of source code during compilation and running)
+	      occurrence to the line of source code during compilation and running)
 	    </ul>
           </section>
           <section>
@@ -90,20 +90,20 @@
 	    instead of other IDEs (Eclipse, IntelliJ...?)
 	  </section>
 	  <section>
-	    <p>emacs is protable, lightweighted (e.g., fast), yet powerful</p>
+	    <p>Emacs is portable, light-weighted (e.g., fast), yet powerful</p>
 	  </section>
 	  <section>
-	    <p>Emacs is a good platform (instead of just being an editor), so the learning experience can be applied to other taks 
-	    <p> e.g., using Emacs with reveal.js libararies to write
-	    HTML5 presentation slides like this one, where I do not need to learn javascript
-	    yet I can easily comne up an nice interactive sides for presentation.  
+	    <p>Emacs is a good platform (instead of just being an editor), so the learning experience can be applied to other tasks 
+	    <p> e.g., using Emacs with reveal.js libraries to write
+	    HTML5 presentation slides like this one, where I do not need to learn JavaScript
+	    yet I can easily come up an nice interactive sides for presentation.  
           </section>
 	</section>
 
 	<section>
 	  <h1>Requirement</h1>
 	  <section>
-	    for using emacs to develop Processing/Arduino
+	    for using Emacs to develop Processing/Arduino
 	  </section>
 	  <section>
 	    <ul>
@@ -118,10 +118,10 @@
         <section>
 	  <h2>installation procedure</h2>
 	  <ol>
-	    <li><p>download the emacs</li>	
-	    <li>configurate the init.el file for locating the package repositories
-	    <li><p>install the required packages:(ecb, jdee, multi-refactory...) </p>
-	    <li>configurate the init.el file for each package
+	    <li><p>download the Emacs</li>	
+	    <li>configure the init.el file for locating the package repositories
+	    <li><p>install the required packages:(ECB, JDEE, multi-refactory...) </p>
+	    <li>configure the init.el file for each package
 	  </ol>
         </section>	  
 
@@ -164,10 +164,10 @@
   <ul>
     <li>packages using the package management system
       <ul>
-	<li>ecb
-	<li>jdee
+	<li>ECB
+	<li>JDEE
       </ul>
-    <li>"Unofficial/external" packages by maunal installation 
+    <li>"Unofficial/external" packages by manual installation 
       <ul>
 	<li>multi-refactory or c-xref
       </ul>
@@ -183,7 +183,7 @@
       <li>S-</li>"shift" with other key
       <li>M-</li>"meta" with other key, where
       <ul>
-	<li>in windows/linux: "Alt"
+	<li>in windows/Linux: "Alt"
 	<li>in OSX: <>
       </ul>
     </ul>
@@ -191,7 +191,7 @@
 </section>
 
 <section>
-  <h2>Runing Package Management</h2>
+  <h2>Running Package Management</h2>
   <section> 
     <ol>
       <li>Emacs Main Menu ->
@@ -205,12 +205,12 @@
 	<li>
 	  <ul>
 	    <li>key "i" to select the item under the cursor
-	    <li>key "u" to unselect
-	    <li>key "x" to install all selected pacjages
+	    <li>key "u" to deselect
+	    <li>key "x" to install all selected packages
 	  </ul>
       </ul>
     <p>let it finish the download and compilation
-    <p>then quit (Main Menu -> File -> Quit) the emacs and relaunch
+    <p>then quit (Main Menu -> File -> Quit) the Emacs and relaunch
   </section>
 </section>
 
@@ -218,7 +218,7 @@
   <h2>install multi-refactory</h2>
   <p>
     <ol>
-      <li>download it from the green botton on <a href="https://github.com/shelandy/multi-refactory/tree/processsing-mode">multi-refactory</a>
+      <li>download it from the green button on <a href="https://github.com/shelandy/multi-refactory/tree/processsing-mode">multi-refactory</a>
       <li>unzip the file
       <li>follow the instruction to install 
     </ol>
@@ -282,7 +282,7 @@ use the icon on menu to save the changed file, or type C-x C-s
   <ol>
     <li>execute Emacs
     <li>load your .pde Processing file
-    <li>execute the emacs command M-x ecb-activate
+    <li>execute the Emacs command M-x ecb-activate
       <ul>
 	<li>Emacs commands can be set up as a menu button (will be covered in a different slide)   
       </ul>
@@ -297,11 +297,11 @@ use the icon on menu to save the changed file, or type C-x C-s
   <h1>Full-blown IDE</h1>
   <ul>
     <li>ECB provides code view, simple debugging and both text and
-  graph resuld in run time.
+  graph result in run time.
     <li> .pde file will automatically load processing mode, where 
       <ul>
 	<li>the processing sub menu provides the major functions
-	(comiple, run...) as the Processing built-in IDE 
+	(compile, run...) as the Processing built-in IDE 
 	<LI>maintain the compatibility to run under Processing's built-in IDE
 	<li>The c-xref sub menu provides extra functions such as
 	refactoring and other compile/run function, but requiring
@@ -316,8 +316,8 @@ use the icon on menu to save the changed file, or type C-x C-s
   <ul>
     <li>Run as Java program</li>
     <ul>
-      <li>switch to Emacs' jdee-mode by excuting M-x jdee-mode
-      <li>if adding enough java code, it provide hierarchical variable and method view, can also comiple and run as java program, but needs extra configuration 
+      <li>switch to Emacs' jdee-mode by executing M-x jdee-mode
+      <li>if adding enough java code, it provide hierarchical variable and method view, can also compile and run as java program, but needs extra configuration 
       <LI>lose the compatibility for running under Proceesing's built-in IDE
     </ul>
     <li>Run as Processing program</li>
@@ -340,7 +340,7 @@ use the icon on menu to save the changed file, or type C-x C-s
 <section>
   <h1>Learning Cost</h1>
   <section>
-  Is the effort of learning Emacs worth the investiment?
+  Is the effort of learning Emacs worth the investment?
 </section>
 <section>
   <img src="images/emmetMode.png">
@@ -357,12 +357,12 @@ use the icon on menu to save the changed file, or type C-x C-s
     know the relationship of an object (variable, class, file,...) in the coding context 
   </section>
   <section>    
-    <p>Static relationship (e.g., scope in decalration hierachy)  
-    <p>(fully by JDEE mode package, partiallly by processing mode package)
+    <p>Static relationship (e.g., scope in declaration hierarchy)  
+    <p>(fully by JDEE mode package, partially by processing mode package)
     <ul>
   </section>
   <section>
-    <p>mapping dymamic relationship e.g., all locations using this
+    <p>mapping dynamic relationship e.g., all locations using this
     method/variable
     <p>(by highlight-symbol package) 
   </section>
@@ -370,7 +370,7 @@ use the icon on menu to save the changed file, or type C-x C-s
     dual Context/Content view and switching
     <ul>
       <li>by ECB hierarchy windows(Context) + code window (Content)
-      <li>code folding/unfolding (by hide-region or ECB/jdee mode)
+      <li>code folding/unfolding (by hide-region or ECB/JDEE mode)
     </UL>
   </section>
   <section>
@@ -380,7 +380,7 @@ use the icon on menu to save the changed file, or type C-x C-s
     Semantic relationship (e.g., compilation and running)
     <ul>
       <p><li>show line number of error</li> (requires
-      complier/symbol table integration) (supported by processing-mode)
+      compiler/symbol table integration) (supported by processing-mode)
       <LI>clickable meant to jump back to the particular
 	code location (supported by processing-mode)
       <li>show content of variables (w/ debugger) 
